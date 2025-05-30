@@ -5,22 +5,22 @@
 ### 1.1 Arquitectura de Datos Implementada
 
 **Fortalezas identificadas:**
-• Diseño modular: La estructura de 5 hojas especializadas (Alumnos, EC Individual, Grupos, ComponentesSI, NumerosDelParcial) demuestra una correcta separación de concerns y normalización de datos
-• Integridad referencial: Sistema de nombres definidos para validación cruzada entre hojas
-• Escalabilidad: Capacidad para manejar 82 estudiantes distribuidos en 4 grados universitarios
+- Diseño modular: La estructura de 5 hojas especializadas (Alumnos, EC Individual, Grupos, ComponentesSI, NumerosDelParcial) demuestra una correcta separación de concerns y normalización de datos
+- Integridad referencial: Sistema de nombres definidos para validación cruzada entre hojas
+- Escalabilidad: Capacidad para manejar 82 estudiantes distribuidos en 4 grados
 
 **Métricas del sistema:**
-• Cobertura de datos: 100% de estudiantes registrados con seguimiento individual
-• Granularidad temporal: Seguimiento sesión por sesión de asistencia
-• Diversidad de métricas: Evaluación continua, parciales y análisis demográfico integrados
+- Cobertura de datos: 100% de estudiantes registrados con seguimiento individual
+- Granularidad temporal: Seguimiento sesión por sesión de asistencia
+- Diversidad de métricas: Evaluación continua, parciales y análisis demográfico integrados
 
 ### 1.2 Alineación con Objetivos Estratégicos
 
 El sistema responde a los cuatro pilares fundamentales de la dirección de SI:
-• Planificación: Estructura predefinida para seguimiento académico
-• Organización: Clasificación por grados, grupos y componentes evaluativos
-• Dirección: Métricas de rendimiento y asistencia para toma de decisiones
-• Control: Validaciones automáticas y alertas de cumplimiento
+- Planificación: Estructura predefinida para seguimiento académico
+- Organización: Clasificación por grados, grupos y componentes evaluativos
+- Dirección: Métricas de rendimiento y asistencia para toma de decisiones
+- Control: Validaciones automáticas y alertas de cumplimiento
 
 ## 2. ORGANIZACIÓN - Estructura y Gobernanza de Datos
 
@@ -48,9 +48,9 @@ El sistema responde a los cuatro pilares fundamentales de la dirección de SI:
 
 El sistema implementa un **algoritmo de validación automática** para composición de grupos que evalúa:
 
-• Porcentajes mínimos y máximos por grado
-• Distribución de género
-• Balance entre estudiantes nacionales e internacionales
+- Porcentajes mínimos y máximos por grado
+- Distribución de género
+- Balance entre estudiantes nacionales e internacionales
 
 **Valor estratégico:** Esta automatización reduce errores manuales y garantiza equidad en la formación de equipos de trabajo.
 
@@ -216,9 +216,9 @@ El sistema implementa un **algoritmo de validación automática** para composici
 | Recuperación | Sin procedimientos aparentes | 🔴 Crítico | RTO: 1h, RPO: 1h | Q2 2025 |
 
 **Métricas objetivo de continuidad:**
-• RTO (Recovery Time Objective): 1 hora máximo
-• RPO (Recovery Point Objective): 1 hora máximo de pérdida de datos
-• Disponibilidad del sistema: 99.9% (8.77 horas downtime/año)
+- RTO (Recovery Time Objective): 1 hora máximo
+- RPO (Recovery Point Objective): 1 hora máximo de pérdida de datos
+- Disponibilidad del sistema: 99.9% (8.77 horas downtime/año)
 
 ## 8. CONCLUSIONES Y RECOMENDACIONES EJECUTIVAS
 
