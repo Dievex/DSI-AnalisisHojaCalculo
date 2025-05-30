@@ -1,11 +1,14 @@
-# Análisis de la Hoja de Cálculo DSI desde la Perspectiva de un Director de Sistemas de Información
+# Análisis de la [Hoja de Cálculo](https://docs.google.com/spreadsheets/d/1KxmuKK_bd0rki4Kx3zlUAA2rIVUHJhaJf0dMx5KupC4/edit?gid=124992110#gid=124992110) DSI
+
+## Introducción
+Este analisis sigue la estructura vista en la asignatura pero desde un punto de vista directivo externo, evaluando la hoja de calculos desde el punto de vista profesional y académico.
 
 ## 1. PLANIFICACIÓN - Análisis de la Estructura del Sistema
 
 ### 1.1 Arquitectura de Datos Implementada
 
 **Fortalezas identificadas:**
-- Diseño modular: La estructura de 5 hojas especializadas (Alumnos, EC Individual, Grupos, ComponentesSI, NumerosDelParcial) demuestra una correcta separación de concerns y normalización de datos
+- Diseño modular: La estructura de 5 hojas especializadas (Alumnos, EC Individual, Grupos, ComponentesSI, NumerosDelParcial) demuestra una correcta separación de asuntos y normalización de datos
 - Integridad referencial: Sistema de nombres definidos para validación cruzada entre hojas
 - Escalabilidad: Capacidad para manejar 82 estudiantes distribuidos en 4 grados
 
@@ -20,7 +23,7 @@ El sistema responde a los cuatro pilares fundamentales de la dirección de SI:
 - Planificación: Estructura predefinida para seguimiento académico
 - Organización: Clasificación por grados, grupos y componentes evaluativos
 - Dirección: Métricas de rendimiento y asistencia para toma de decisiones
-- Control: Validaciones automáticas y alertas de cumplimiento
+- Control: Validaciones automáticas
 
 ## 2. ORGANIZACIÓN - Estructura y Gobernanza de Datos
 
@@ -141,9 +144,9 @@ El sistema implementa un **algoritmo de validación automática** para composici
 
 | Componente | Herramienta | Versión/Tipo | Evaluación | Limitaciones |
 |------------|-------------|--------------|------------|--------------|
-| Plataforma base | Microsoft Excel | Desktop | 🟡 Funcional | Escalabilidad limitada |
+| Plataforma base | Gogle sheets | Wweb | 🟡 Funcional | Dependencia de conexión a internet y dependencia de Google para hacer los backups |
 | Lógica de negocio | Fórmulas complejas | Avanzadas | 🟢 Efectivo | Mantenibilidad compleja |
-| Integridad de datos | Referencias nombradas | Nativo | 🟢 Robusto | Sin versionado |
+| Integridad de datos | Referencias nombradas | Nativo | 🟢 Robusto | Dependencia de Google para el versionado |
 | Control de calidad | Validación de datos | Automático | 🟡 Básico | Sin auditoría |
 
 **Evaluación de madurez tecnológica:**
@@ -164,26 +167,25 @@ El sistema implementa un **algoritmo de validación automática** para composici
 
 | Capa | Función | Implementación Actual | Madurez | Próximos Pasos |
 |------|---------|----------------------|---------|----------------|
-| Presentación | Dashboards y vistas | Excel sheets especializadas | 🟡 Básica | UI/UX interactiva |
+| Presentación | Dashboards y vistas | Google sheets especializadas | 🟡 Básica | UI/UX interactiva |
 | Lógica de Negocio | Validaciones y cálculos | Fórmulas y macros avanzadas | 🟢 Sólida | APIs y microservicios |
 | Datos | Estructura normalizada | Hojas relacionadas | 🟢 Buena | Base de datos relacional |
-| Persistencia | Almacenamiento | Archivo Excel local | 🔴 Limitada | Cloud + versionado |
 
 ## 6. PROPUESTAS DE MEJORA ESTRATÉGICA
 
 ### 6.1 Mejoras de Corto Plazo (0-6 meses)
 
-| Mejora | Descripción | Impacto Esperado | Recursos Necesarios | Timeline |
-|--------|-------------|------------------|-------------------|----------|
-| Dashboard Ejecutivo Interactivo | Filtros dinámicos, gráficos tiempo real, KPIs con semáforos | 🟢 Alto | 1 Analista BI × 2 meses | Q1 |
-| Sistema de Alertas Proactivas | Notificaciones automáticas asistencia <75%, riesgo académico <5.0 | 🟢 Alto | 1 Desarrollador × 1 mes | Q1 |
-| Métricas Avanzadas de Calidad | NPS académico, tiempo resolución ejercicios, correlaciones | 🟡 Medio | 1 Data Scientist × 1 mes | Q2 |
+| Mejora | Descripción | Impacto Esperado |
+|--------|-------------|------------------|
+| Dashboard Ejecutivo Interactivo | Filtros dinámicos, gráficos tiempo real, KPIs con semáforos | 🟢 Alto |
+| Sistema de Alertas Proactivas | Notificaciones automáticas asistencia <75%, riesgo académico <5.0 | 🟢 Alto |
+| Métricas Avanzadas de Calidad | NPS académico, tiempo resolución ejercicios, correlaciones | 🟡 Medio |
 
 ### 6.2 Mejoras de Medio Plazo (6-18 meses)
 
 | Mejora | Descripción | Impacto Esperado |
 |--------|-------------|------------------|
-| Integración Sistemas | API gestión académica, campus virtual, videoconferencia | 🟢 Muy Alto |
+| Integración Sistemas | API gestión académica, videoconferencia | 🟢 Muy Alto |
 | Análisis Predictivo & ML | Modelo riesgo abandono, recomendaciones grupos, predicción rendimiento | 🟢 Muy Alto |
 | Gamificación & Engagement | Badges asistencia, ranking grupos, challenges semanales | 🟡 Medio |
 
@@ -192,8 +194,6 @@ El sistema implementa un **algoritmo de validación automática** para composici
 | Iniciativa Estratégica | Objetivo |
 |------------------------|----------|
 | Plataforma BI Enterprise | Migración Power BI/Tableau con drill-down y benchmarking |
-| Certificación ISO 21001 | Gestión calidad educativa con auditorías automáticas |
-| Centro de Excelencia Académica | Hub de mejores prácticas y análisis comparativo |
 
 ## 7. EVALUACIÓN DE RIESGOS Y MITIGACIÓN
 
@@ -201,7 +201,6 @@ El sistema implementa un **algoritmo de validación automática** para composici
 
 | Riesgo | Probabilidad | Impacto | Nivel | Descripción | Estrategia de Mitigación |
 |--------|--------------|---------|-------|-------------|-------------------------|
-| Dependencia Excel | Alta | Alto | 🔴 CRÍTICO | Plataforma única, pérdida datos, escalabilidad limitada | Plan migración gradual + backup cloud |
 | Gap asistencia ADE | Media | Medio | 🟡 MEDIO | 69.2% vs 78.8% IOI, impacto en resultados | Programa mentorización específico |
 | 18% no presentación | Baja | Bajo | 🟢 BAJO | Sesgo en métricas de rendimiento | Sistema recordatorios automáticos |
 | Falta de integración | Alta | Medio | 🟡 MEDIO | Trabajo manual, errores humanos | Desarrollo APIs institucionales |
@@ -209,16 +208,16 @@ El sistema implementa un **algoritmo de validación automática** para composici
 
 ### 7.2 Plan de Continuidad de Negocio
 
-| Componente | Solución Actual | Nivel Protección | Mejora Requerida | Timeline |
-|------------|-----------------|------------------|------------------|----------|
-| Backup de datos | Manual, local | 🔴 Insuficiente | Automatización cloud | Q1 2025 |
-| Documentación | Limitada | 🟡 Básica | Procedimientos completos | Q1 2025 |
-| Recuperación | Sin procedimientos aparentes | 🔴 Crítico | RTO: 1h, RPO: 1h | Q2 2025 |
+| Componente | Solución Actual | Nivel Protección | Mejora Requerida |
+|------------|-----------------|------------------|------------------|
+| Backup de datos | Manual, local | 🔴 Insuficiente | Automatización cloud |
+| Documentación | Limitada | 🟡 Básica | Procedimientos completos |
+| Recuperación | Sin procedimientos aparentes | 🔴 Crítico | RTO: 1h, RPO: 1h (dependeran de los servicion de Google)|
 
 **Métricas objetivo de continuidad:**
 - RTO (Recovery Time Objective): 1 hora máximo
 - RPO (Recovery Point Objective): 1 hora máximo de pérdida de datos
-- Disponibilidad del sistema: 99.9% (8.77 horas downtime/año)
+- Disponibilidad del sistema: 99.9% (8.76 horas downtime/año)
 
 ## 8. CONCLUSIONES Y RECOMENDACIONES EJECUTIVAS
 
@@ -232,25 +231,15 @@ El sistema implementa un **algoritmo de validación automática** para composici
 | Resultados académicos | 🟢 Excepcionales | 92.7% aprobados (+17.7% vs nacional) | Muy Alto |
 | Usabilidad | 🟡 Funcional | Familiar para usuarios, curva aprendizaje baja | Medio |
 
-### 8.2 Roadmap Estratégico con Hitos
-
-| Fase | Período | Objetivos Clave |
-|------|---------|-----------------|
-| Fase 1 | Q1-Q2 2025 | Dashboard + Alertas + Métricas avanzadas |
-| Fase 2 | Q3-Q4 2025 | Integración + Predictivo + Gamificación |
-| Fase 3 | 2026 | BI Platform + ISO 21001 + Centro Excelencia |
-| **TOTAL** | **24 meses** | **Transformación digital completa** |
-
 ## 9. INVERSIÓN Y ANÁLISIS FINANCIERO
 
 ### 9.1 Desglose de Inversión por Categoría
 
-| Categoría | Descripción | % del Total | Prioridad |
+| Categoría | Descripción | % del Total del presupuesto| Prioridad |
 |-----------|-------------|-------------|-----------|
-| Desarrollo BI & Dashboard | Interface interactiva, reportes ejecutivos | 15.8% | 🔴 Alta |
-| Integración de Sistemas | APIs, sincronización, conectores | 26.3% | 🔴 Alta |
-| Análisis Predictivo & ML | Modelos IA, algoritmos, data science | 36.8% | 🟡 Media |
-| Certificación & Calidad | ISO 21001, auditorías, compliance | 21.1% | 🟢 Baja |
+| Desarrollo BI & Dashboard | Interface interactiva, reportes ejecutivos | 20.0% | 🔴 Alta |
+| Integración de Sistemas | APIs, sincronización, conectores | 33.3% | 🔴 Alta |
+| Análisis Predictivo & ML | Modelos IA, algoritmos, data science | 46.7% | 🟡 Media |
 | **TOTAL PROGRAMA** | - | **100%** | - |
 
 ## 10. MÉTRICAS DE ÉXITO Y SEGUIMIENTO
@@ -273,11 +262,13 @@ El sistema implementa un **algoritmo de validación automática** para composici
 | Riesgo Estudiantil | Alertas tempranas activadas | Tiempo real | Tutor Académico |
 | Calidad del Sistema | Disponibilidad y errores | Continua | CTO |
 
+*En este caso todos los responsables son el mismo, pero en un escenario real sería más especifico.*
+
 ### 10.3 Plan de Comunicación de Resultados
 
 | Audiencia | Formato | Contenido | Frecuencia |
 |-----------|---------|-----------|------------|
-| Rectorado | Executive Summary | KPIs, ROI, decisiones estratégicas | Trimestral |
+| Rectorado | Executive Summary | KPIs, decisiones estratégicas | Trimestral |
 | Decanos | Dashboard interactivo | Rendimiento por facultad | Mensual |
 | Profesores | Reportes operativos | Asistencia, participación estudiantes | Semanal |
 | Estudiantes | Portal autoservicio | Progreso personal, ranking | Tiempo real |
@@ -292,3 +283,5 @@ El sistema implementa un **algoritmo de validación automática** para composici
 | Problemas integración | Media | Alto | 🟡 6 | Pruebas piloto | CTO |
 | Pérdida datos migración | Baja | Muy Alto | 🟡 5 | Backup múltiple | Director SI |
 | Falta adopción usuarios | Media | Medio | 🟢 4 | Formación intensiva | Director Académico |
+
+*En este caso todos los responsables son el mismo, pero en un escenario real sería más especifico.*
